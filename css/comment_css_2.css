@@ -1,0 +1,228 @@
+
+        .comment-options,
+    .thread-options {
+      position: relative;
+      margin-left: auto;
+      z-index: 100;
+    }
+
+    /* Always show the 3-dot button */
+    .options-btn {
+      background: none;
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+      color: #666;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    .options-btn:hover {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    .options-menu button.report-thread,
+    .options-menu button.report-comment {
+      color: #f39c12;
+    }
+
+    .options-menu button.report-thread:hover,
+    .options-menu button.report-comment:hover {
+      background: #fff5e6;
+    }
+
+
+    /* Dropdown menu */
+    .options-menu {
+      position: absolute;
+      right: 0;
+      top: 100%;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: none;
+      min-width: 150px;
+      z-index: 1000;
+    }
+
+    .options-menu.show {
+      display: block;
+    }
+
+    /* Hide delete buttons by default */
+    .delete-thread,
+    .delete-comment {
+      display: none;
+    }
+
+    /* Show delete button only if allowed */
+    .comment[data-can-delete="true"] .delete-comment,
+    .thread[data-can-delete="true"] .delete-thread {
+      display: flex;
+      color: #dc3545;
+    }
+
+    .options-menu button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      padding: 8px 16px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .options-menu button:hover {
+      background: #f5f5f5;
+    }
+
+    .options-menu button.delete-comment:hover,
+    .options-menu button.delete-thread:hover {
+      background: #fff1f1;
+    }
+
+    /* Report Modal Styles */
+    .report-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: white;
+      border-radius: 8px;
+      padding: 0;
+      width: 90%;
+      max-width: 500px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .modal-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8f9fa;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .modal-title {
+      margin: 0;
+      font-size: 1.25rem;
+      color: #1a1a1a;
+    }
+
+    .close-modal {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #666;
+      padding: 0;
+      line-height: 1;
+    }
+
+    .close-modal:hover {
+      color: #333;
+    }
+
+    .modal-body {
+      padding: 20px;
+    }
+
+    .report-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .report-form label {
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .report-form select,
+    .report-form textarea {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      background-color: #fff;
+    }
+
+    .report-form textarea {
+      min-height: 120px;
+      resize: vertical;
+      display: block;
+      margin: 0;
+      box-sizing: border-box;
+      pointer-events: auto;
+    }
+
+    .report-form select:focus,
+    .report-form textarea:focus {
+      outline: none;
+      border-color: #f5b301;
+      box-shadow: 0 0 0 2px rgba(245, 179, 1, 0.1);
+    }
+
+      /* Highlighted comment when opened from report */
+      .highlighted-comment { background: #fff3b0; transition: background 0.3s; }
+
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.2s;
+    }
+
+    .btn-primary {
+      background-color: #f5b301;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #e5a800;
+    }
+
+    .btn-secondary {
+      background-color: #e9ecef;
+      color: #495057;
+    }
+
+    .btn-secondary:hover {
+      background-color: #dee2e6;
+    }
+
